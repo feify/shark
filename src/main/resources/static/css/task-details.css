@@ -1,0 +1,252 @@
+.right-content-wrapper {
+	padding: 20px
+}
+
+.right-content-manager-status-item {
+	float: left;
+	height: 32px;
+	width: 100px;
+	border-right: 1px solid #a0a0a0
+}
+
+.right-content-manager-status-item-label {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-color: #eee;
+	text-align: center;
+	font: 700 14px/32px "Microsoft yahei"
+}
+
+.right-content-manager-status-item-cur {
+	background: 0 0
+}
+
+.right-content-manager-status-item-cur .right-content-manager-status-item-status,
+	.right-content-manager-status-item-cur .right-content-manager-status-item-num
+	{
+	color: #fff
+}
+
+.manager-status-item-color-all {
+	background-color: #a0a0a0
+}
+
+.manager-status-item-color-succ {
+	background-color: #5cb531
+}
+
+.manager-color-succ {
+	color: #5cb531
+}
+
+.manager-status-item-color-fail {
+	background-color: #e60012
+}
+
+.manager-color-fail {
+	color: #e60012
+}
+
+.manager-status-item-color-process {
+	background-color: #0068b7;
+	border-right: 0
+}
+
+.manager-color-process {
+	color: #0068b7
+}
+
+.right-content-manager-status-item-status {
+	font-size: 14px
+}
+
+.manager-search-input {
+	float: left;
+	width: 300px;
+	height: 30px;
+	border: 1px solid #7d7d7d;
+	background-color: #fff;
+	margin: 0 6px
+}
+
+.manager-search-btn {
+	float: right;
+	width: 32px;
+	height: 32px
+}
+
+.right-content-manager-task-item {
+	position: relative;
+	height: 64px;
+	margin: 10px 0;
+	padding: 12px 18px;
+	border: 1px solid #e3e3e3;
+	background-color: #fff
+}
+
+.manager-task-item-link {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	height: 100%
+}
+
+.manager-task-item-not-viewed {
+	background-color: #f4f4f4
+}
+
+.manager-task-item-not-viewed::after {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 6px;
+	background-color: #f8b551
+}
+
+.right-content-manager-task-item-wrap {
+	position: relative;
+	width: 100%;
+	height: 100%
+}
+
+.right-content-manager-task-item-top-wrap,
+	.right-content-manager-task-item-bottom-wrap {
+	position: absolute;
+	left: 0;
+	width: 100%
+}
+
+.right-content-manager-task-item-top-wrap {
+	top: 0;
+	line-height: 17px
+}
+
+.right-content-manager-task-item-title {
+	float: left;
+	font: 17px/100% "microsoft yahei"
+}
+
+.right-content-manager-task-item-pub-time {
+	cursor: text;
+	float: right;
+	font-size: 12px;
+	margin-left: 10px
+}
+
+.right-content-manager-task-item-bottom-wrap {
+	bottom: 0;
+	line-height: 25px
+}
+
+.manager-task-icon {
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin: 3px 7px 0 0
+}
+
+.right-content-manager-task-item-schedule-wrap {
+	position: relative;
+	float: left;
+	width: 350px;
+	height: 23px;
+	border: 1px solid #c9c9c9;
+	text-align: center
+}
+
+.task-item-schedule-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	color: #0068b7;
+	font-size: 12px
+}
+
+.right-content-manager-task-item-schedule {
+	width: 50%;
+	height: 100%;
+	background: #b3ddff;
+	background: -webkit-gradient(linear, 0 0, 100% 0, from(#96ceff),
+		to(#d0ebff));
+	background: -moz-linear-gradient(left, #96ceff, #d0ebff);
+	background: -o-linear-gradient(left, #96ceff, #d0ebff);
+	background: -ms-linear-gradient(left, #96ceff, #d0ebff);
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#96ceff',
+		endColorStr='#d0ebff', gradientType='1');
+	border-right: 1px solid #c9c9c9;
+	text-align: center;
+	font: 12px/23px microsoft yahei
+}
+
+.right-content-manager-task-item-res-time {
+	margin-left: 10px;
+	font-size: 12px
+}
+
+.right-content-manager-task-item-detail-wrap {
+	float: left;
+	width: 50%;
+	font-weight: 700
+}
+
+.right-content-manager-task-item-delete,
+	.right-content-manager-task-item-edit {
+	float: right;
+	padding-left: 20px;
+	color: #bbb;
+	line-height: 15px;
+	margin-top: 5px
+}
+
+.right-content-manager-task-item-edit:hover {
+	background-position: 0 -15px
+}
+
+.right-content-manager-task-item-delete {
+	margin-left: 16px;
+	background-position: 0 -30px
+}
+
+.right-content-manager-task-item-delete:hover {
+	background-position: 0 -45px
+}
+
+.right-content-manager-task-item-delete:hover,
+	.right-content-manager-task-item-edit:hover {
+	color: #1876bd
+}
+
+.right-content-manager-footer-pagger {
+	float: right;
+	margin-top: 80px
+}
+
+.right-content-manager-footer-pagger-item {
+	float: left;
+	cursor: pointer;
+	font: 12px/100% microsoft yahei;
+	padding: 8px 10px
+}
+
+.right-content-manager-footer-pagger-item:hover {
+	background-color: #0068b7;
+	color: #fff
+}
+
+.manager-footer-pagger-item-cur {
+	background-color: #e5e5e5
+}
+
+.manager-task-empty {
+	text-align: center;
+	font: 20px/36px "microsoft yahei";
+	margin: 100px 0
+}

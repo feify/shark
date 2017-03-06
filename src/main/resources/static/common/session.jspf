@@ -1,0 +1,8 @@
+<%@ page import="com.alibaba.fastjson.JSONObject"%>
+<%@ page import="com.alibaba.fastjson.JSONArray"%>
+<%
+	JSONObject user = (JSONObject)request.getSession().getAttribute("user");
+    String userId = user.get("id").toString();
+    String userName = user.get("userName").toString(); 
+    String userEmail = user.get("userEmail").toString();
+%>

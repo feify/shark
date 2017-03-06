@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+
+.nav-list {
+	float: right;
+	width: 50%;
+	margin: 50px 20px 0 0
+}
+
+.nav-item {
+	float: right;
+	padding: 0 10px;
+	height: 12px;
+	line-height: 10px;
+	border-right: 1px solid #999;
+	color: #fff
+}
+
+.cooperation-contact {
+	border-right: 0
+}
+
+.header-nav-seprator {
+	float: left;
+	margin: 28px 7px;
+	color: #fff;
+	border-left: 1px solid #999;
+	height: 16px
+}
+
+

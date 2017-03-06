@@ -1,0 +1,113 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<!-- mainNav start -->
+
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="<%=request.getContextPath()%>">
+				<img style="width:201px;height:50px;" class="pull-left" alt="所问数据" src="<%=request.getContextPath()%>/img/logos/logoIcon.png">
+			</a>
+		</div>
+		<!-- Top Menu Items -->
+		<ul class="nav navbar-right top-nav">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<i class="fa fa-user"></i> <%=userName %>
+					<b class="fa fa-caret-down"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-fw fa-user"></i> 个人资料</a>
+					</li>
+					<li><a href="#"><i class="fa fa-fw fa-envelope"></i> 收件箱</a></li>
+					<li><a href="#"><i class="fa fa-fw fa-gear"></i> 设置</a>
+					</li>
+					<li class="divider"></li>
+					
+				</ul>
+			</li>
+			<li>
+				<a href="<%=request.getContextPath()%>/action/logoutAction.do"><i class="fa fa-sign-out"></i> 退出</a>
+			</li>
+			<li><div class="nav-string">|</div></li>
+			<li><a href="<%=request.getContextPath()%>/introDoc.jsp"><i class="fa fa-info-circle"></i> 用户手册</a></li>
+			<li><a href="<%=request.getContextPath()%>/introDoc.jsp?source=contactUs"><i class="fa fa-comment-o"></i> 联系我们</a></li>
+			
+		</ul>
+
+		<!-- /.navbar-collapse -->
+		
+		<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav side-nav">
+				<li class=" nav-first">
+					<a href="<%=request.getContextPath()%>/newTask.jsp">
+						<button id="newTask" class="btn btn-yellow" style="margin:0 15px 0 20px;width:150px;">
+							<span class="fa fa-plus" style="padding-right:10px"></span>新建任务
+						</button>
+					</a>
+					
+				</li>
+				<li class="nav-first">
+					<a href="<%=request.getContextPath()%>/action/retrieveTasksAction.do">
+						<span class="fa fa-line-chart" style="padding-right:5px"></span>全部任务
+					</a>
+				</li>
+				<li class="nav-first">
+					<a href="#" data-toggle="collapse" data-target="#recentTask" onclick="getRecentTask('<%=request.getContextPath()%>',5);">
+						<span class="fa fa-tasks" style="padding-right:5px"></span>近期任务
+					</a>
+					<ul id="recentTask" class="nav sub-menu collapse">
+						
+					</ul>
+				</li>
+				<li>
+					<div class="navLi">
+						<span class="fa fa-list-ul" style="padding-right:10px;"></span>管理分组
+					</div>
+					<ul class="nav sub-menu nav-group">
+					<% 
+						if(null!=groupListByUserId){
+					%>
+						<c:forEach var="groupInfo" items="<%=groupListByUserId%>">
+							<li id='${groupInfo.groupId}'>
+								<a href="#" onclick="groupManage('${groupInfo.groupId}',this,'<%=request.getContextPath()%>')">
+									<span class="fa fa-group">
+										<input class="nav-left-group" value="${groupInfo.groupName}" placeholder="输入分组名称" readonly="readonly">
+										<button class="btn btn-warning hidden nav-left-del" onclick="delGroup(this);">删除</button>
+									</span>
+								</a>
+							</li>										
+						</c:forEach> 
+					<%} %>
+					</ul>
+					<ul>
+						<li id="addGroup" class="hidden">
+							<a href="#">
+								<span class="fa fa-plus-square" style="padding-right:10px"></span>添加分组
+							</a>
+						</li>
+						<li id="editGroup"  class="nav-first">
+							<button id="btnEditGroup" class="btn btn-warning" style="margin:10px 15px 10px 40px;width:150px;">
+								<span class="fa fa-edit" style="padding-right:10px"></span>修改分组
+							</button>
+						</li>
+						<li id="saveGroup" class="hidden nav-first">
+							<button id="btnSaveGroup" class="btn btn-warning" style="margin:10px 20px 10px 40px;width:150px;" >
+								<span class="fa fa-edit" style="padding-right:10px"></span>保存
+							</button>
+						</li>
+					</ul>
+					
+				</li>
+			</ul>
+		</div>
+	</nav>
+<!-- mainNav end -->

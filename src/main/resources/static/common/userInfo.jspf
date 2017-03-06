@@ -1,0 +1,86 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!-- userInfo start -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <div class="modal-dialog">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" 
+               data-dismiss="modal" aria-hidden="true">
+                  &times;
+            </button>
+            <h4 class="modal-title" id="myModalLabel">
+            	<i class="fa fa-fw fa-user"></i> 个人资料
+            </h4>
+         </div>
+         <div class="modal-body">
+         	<div class="row div-info">
+         		<label class="lable-info pull-left" for="userName">
+					用户名<span class="spanRed"> *</span> :
+				</label>
+            	<div class="input-group pull-left" style="height: 34px;padding: 6px 12px;font-size: 14px;">
+					<%=userName %>
+				</div>
+			</div>
+			
+			<div class="row div-info">
+            	<label class="pull-left lable-info" for="email">
+					邮箱<span class="spanRed"> *</span> :
+				</label>
+				<div class="input-group  pull-left" style="width:60%">
+					<input id="email" name="email" type="text" class="form-control" value='<%=userEmail %>'
+						onblur="javascript:emailOnBlur();" /> 
+					<label id="checkEmailLabel" class="lable-warning" for="email"></label>
+				</div>	
+			</div>
+			
+			<div class="row div-info">
+				<label class="pull-left lable-info" for="password">
+					原密码<span class="spanRed"> *</span> :
+				</label>
+				<div class="input-group pull-left" style="width:60%">
+					<input id="password" name="password" type="password" class="form-control"
+						onblur="javascript:editpassworldOnBlur();" />
+					<label id="checkPasswordLabel" class="lable-warning" for="password"></label>
+				</div>
+			</div>
+			
+			<div class="row div-info">
+				<label class="pull-left lable-info" for="password">
+					新密码<span class="spanRed"> *</span> :
+				</label>
+				<div class="input-group pull-left" style="width:60%">
+					<input id="newPassword" name="newPassword" type="password" class="form-control"
+						onblur="javascript:newPasswordOnBlur();" />
+					<label id="checkNewPasswordLabel" class="lable-warning" for="newPassword"></label>
+				</div>
+			</div>
+
+			<div class="row div-info">
+				<label  class="pull-left lable-info"  for="repassword">
+					确认密码<span class="spanRed"> *</span> :
+				</label>
+				<div class="input-group pull-left" style="width:60%">
+					<input id="repassword" name="repassword" type="password" class="form-control" 
+						onblur="javascript:repassNewpasswordOnBlur();" /> 
+					<label id="checkRepasswordLabel" class="lable-warning" for="repassword"></label>
+					<label class="clearfix" style="font-size: 12px;text-indent:5px; margin-top:5px;">
+						<i class="fa fa-info-circle"></i> 密码长度必须由6位到16位的非空白字符组成
+					</label>
+				</div>
+
+			</div>
+			
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default" 
+               data-dismiss="modal"><i class="fa fa-close"></i> 关闭
+            </button>
+            <button type="button" class="btn btn-info" onclick="checkEditUserInfoForm();">
+               <i class="fa fa-save"></i> 提交更改
+            </button>
+         </div>
+      </div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+<!-- userInfo end -->

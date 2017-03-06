@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!-- innerFooter start -->	
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+						<span class="copyright">
+	 					Copyright &copy; 2016 北京所问数据科技有限公司 (askingdata.com) 京ICP备16004320号 	
+					</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+<!-- innerFooter end -->	
